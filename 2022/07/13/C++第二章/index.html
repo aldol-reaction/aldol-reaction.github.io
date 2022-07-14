@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"aldol-reaction.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="第2章 变量和基本类型2.1 基本内置类型 2.1.1 算术类型    类型 含义 最小尺寸 备注    char 字符 8位 1B(8b)   wchar_t 宽字符 16位    char16_t Unicode字符 16位    char32_t Unicode字符 32位    float 单精度浮点数 6位有效数字 1个字(32b)   double 双精度浮点数 10位有效数字 2个字">
+  <meta name="description" content="第2章 变量和基本类型2.1 基本内置类型 2.1.1 算术类型     类型 含义 最小尺寸 备注     char 字符 8位 1B(8b)   wchar_t 宽字符 16位    char16_t Unicode字符 16位    char32_t Unicode字符 32位    float 单精度浮点数 6位有效数字 1个字(32b)   double 双精度浮点数 10位有效数字 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://aldol-reaction.github.io/2022/07/13/C++%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第2章 变量和基本类型2.1 基本内置类型 2.1.1 算术类型    类型 含义 最小尺寸 备注    char 字符 8位 1B(8b)   wchar_t 宽字符 16位    char16_t Unicode字符 16位    char32_t Unicode字符 32位    float 单精度浮点数 6位有效数字 1个字(32b)   double 双精度浮点数 10位有效数字 2个字">
+<meta property="og:description" content="第2章 变量和基本类型2.1 基本内置类型 2.1.1 算术类型     类型 含义 最小尺寸 备注     char 字符 8位 1B(8b)   wchar_t 宽字符 16位    char16_t Unicode字符 16位    char32_t Unicode字符 32位    float 单精度浮点数 6位有效数字 1个字(32b)   double 双精度浮点数 10位有效数字 2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-13T01:34:52.845Z">
 <meta property="article:modified_time" content="2022-07-11T14:23:17.401Z">
@@ -196,6 +196,7 @@
       
         <h1 id="第2章-变量和基本类型"><a href="#第2章-变量和基本类型" class="headerlink" title="第2章 变量和基本类型"></a>第2章 变量和基本类型</h1><p><strong>2.1 基本内置类型</strong></p>
 <p><strong>2.1.1 算术类型</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -205,7 +206,8 @@
 <th>备注</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>char</td>
 <td>字符</td>
 <td>8位</td>
@@ -247,7 +249,9 @@
 <td>10位有效数字</td>
 <td>4个字(128b)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>存储的基本单元：字，32b/64b。</p>
 <p>明确知晓数值不可能为负时，选用无符号类型。</p>
 <p>char 是否有符号并不确定，因此使用 signed char 或 unsigned char 来指定是否有符号。</p>
@@ -268,18 +272,17 @@
 <p>字符串字面值的类型实际上是字符数组，编译器会向每个字符串结尾添加一个空字符（’\0’），因此字符串字面值的实际长度要比它的内容多 1。</p>
 <p>如果两个字符串字面值紧邻且仅由空格、缩进和换行符分隔，则它们实际上是一个整体。因此字符串比较长时可以直接分行书写。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">&quot;A &quot;</span></span><br><span class="line">		<span class="string">&quot;B&quot;</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
-
 <p><strong>转义序列</strong></p>
-<p>换行符：\n，横向制表符：\t,，报警符：\a，纵向制表符：\v，退格符：\b，<strong>双引号：&quot;，</strong></p>
-<p>**反斜线：\，单引号：&#39;<strong>，</strong>问号：?**，回车符：\r，进纸符：\f</p>
+<p>换行符：\n，横向制表符：\t,，报警符：\a，纵向制表符：\v，退格符：\b，<strong>双引号：\”，</strong></p>
+<p><strong>反斜线：\\，单引号：\’</strong>，<strong>问号：\?</strong>，回车符：\r，进纸符：\f</p>
 <p>上述转义序列被当作一个字符使用。</p>
 <p>也可以使用泛化的转移序列，形式是 \ 后跟 1~3 个八进制数字或 \x 后跟 1 个或多个十六进制数字。</p>
 <p>如果 \ 后面跟着的八进制数字超过 3 个，只有前三个数字与 \ 构成转义序列。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="number">115</span>  <span class="comment">//字符 M</span></span><br><span class="line">\x4d  <span class="comment">//字符 M</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>指定字面值的类型</strong></p>
 <p>可以通过给字面值增加前缀和后缀来改变字面值的默认类型。</p>
 <p>字符和字符串字面值</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -288,7 +291,8 @@
 <th>类型</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>u</td>
 <td>Unicode 16字符</td>
 <td>char16_t</td>
@@ -308,29 +312,36 @@
 <td>UTF-8(仅用于字符串字面常量)</td>
 <td>char</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>整形字面值</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>后缀</th>
-<th align="left">最小匹配类型</th>
+<th style="text-align:left">最小匹配类型</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>u or U</td>
-<td align="left">unsigned</td>
+<td style="text-align:left">unsigned</td>
 </tr>
 <tr>
 <td>l or L</td>
-<td align="left">long</td>
+<td style="text-align:left">long</td>
 </tr>
 <tr>
 <td>ll or LL</td>
-<td align="left">long long</td>
+<td style="text-align:left">long long</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>浮点型字面值</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -338,7 +349,8 @@
 <th>类型</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>f or F</td>
 <td>double</td>
 </tr>
@@ -346,7 +358,9 @@
 <td>l or L</td>
 <td>long double</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>12f 是错的，不能给整型字面值加 f 后缀，可以使用 12.f。</p>
 <p>用 LL 代替 ll 防止与 1 混淆。</p>
 <p><strong>2.2 变量</strong></p>
@@ -354,15 +368,12 @@
 <p><strong>初始化</strong></p>
 <p>可以在同一条定义语句中使用先定义的变量去初始化后定义的其他变量。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> price = <span class="number">109.99</span>, discount = price * <span class="number">0.6</span>;</span><br></pre></td></tr></table></figure>
-
 <p>初始化不是赋值，初始化是创建变量时赋予一个初始值，赋值是把对象的当前值<strong>擦除</strong>并用一个新值来替代。</p>
 <p><strong>列表初始化</strong></p>
 <p>四种初始化方式，其中使用花括号的方式叫做列表初始化。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> i = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> i&#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">i</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
 <p>当用于内置类型的变量时，使用列表初始化且初始值存在信息丢失的风险，编译器会报错。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">double</span> ld = <span class="number">3.14</span>; <span class="type">int</span> a&#123;ld&#125;, b = &#123;ld&#125;; <span class="comment">//错误，存在信息丢失的风险，转换未执行</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">c</span><span class="params">(ld)</span>, d </span>= ld;  <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>默认初始化</strong></p>
 <p>定义于任何函数之外的内置类型则被初始化为 0；</p>
 <p>定义于函数体内的内置类型的对象如果没有初始化，则其值<strong>未定义</strong>。</p>
@@ -372,7 +383,6 @@
 <p>定义：在声明的基础上，创建与名字关联的实体，即申请存储空间，还可能会为变量赋一个初始值。</p>
 <p>要声明一个变量加 extern，声明变量不能赋值，任何包含了显式初始化的声明即成为定义。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i;     <span class="comment">// 声明 i</span></span><br><span class="line"><span class="type">int</span> i;            <span class="comment">// 定义 i；</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i = <span class="number">1</span>; <span class="comment">// 定义 i，初始化抵消了 extern 的作用。</span></span><br></pre></td></tr></table></figure>
-
 <p>变量只能被定义一次，但是可以多次声明。</p>
 <p>extern 定义的变量必须是全局的，这样才可能在其他文件中使用。</p>
 <p>如果要在多个文件中使用同一个变量，变量的定义必须出现在且只能出现在一个文件中，而其他用到该变量的文件必须对其进行声明，却绝对不能重复定义。</p>
@@ -390,7 +400,6 @@
 <p><strong>2.2.4 名字的作用域</strong></p>
 <p>花括号以内是作用域。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">	<span class="type">int</span> ival = <span class="built_in">read</span>();</span><br><span class="line">&#125; <span class="keyword">while</span>(ival); <span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>2.3 复合类型</strong></p>
 <p>复合类型就是基于其他类型定义的类型，引用和指针是其中两种。</p>
 <p>声明语句 = 基本数据类型 + 声明符(类型修饰符(&amp;/*) + 标识符(变量名))</p>
@@ -416,10 +425,8 @@
 <li>声明的基本数据类型部分指出 r 引用的是一个int指针。</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p;</span><br><span class="line"><span class="type">int</span> *&amp;r = p;</span><br></pre></td></tr></table></figure>
-
 <p><strong>空指针</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="literal">nullptr</span>; <span class="comment">// 三种定义空指针的方式。最好用第一种</span></span><br><span class="line"><span class="type">int</span> *p = <span class="number">0</span>; </span><br><span class="line"><span class="type">int</span> *p = <span class="literal">NULL</span>;    <span class="comment">// NULL 是在头文件 cstdlib 中定义的预处理变量，值为 0。</span></span><br></pre></td></tr></table></figure>
-
 <p>初始化指针，如果不清楚该指向谁，先初始化为 nullptr。</p>
 <p><strong>void* 指针</strong></p>
 <p>void* 指针是特殊的指针类型，可以存放任意对象的地址。它的用处比较有限，不能直接操作它所指的对象。</p>
@@ -432,11 +439,11 @@
 <p>不能用非常量引用指向一个常量对象。可以用常量引用指向一个非常量对象。</p>
 <p>当用常量引用绑定一个非常量对象时，不能通过引用改变引用对象的值，但是可以通过其他方式改变值。常量指针也一样。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> &amp;r1 = ci; <span class="comment">// 错误，试图让一个非常量引用指向一个常量对象</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;r2 = i; <span class="comment">// 正确，一个常量引用指向一个非常量对象</span></span><br></pre></td></tr></table></figure>
-
 <p>引用的类型必须与其所引用对象的类型一致，但是有一个例外就是初始化常量引用时允许用任意表达式作为初始值（包括常量表达式），只要该表达式结果可以转换为引用的类型。</p>
 <p><strong>2.4.2 指针和const</strong></p>
 <p>指向常量的指针的用法和常量引用相似，<strong>但是是不一样的。</strong>它既可以指向常量也可以指向非常量，不能改变对象的值。但是非常量对象可以通过其他途径改变值</p>
 <p><strong>2.4.3 顶层const</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -445,7 +452,8 @@
 <th>底层 const</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>含义</td>
 <td>对象本身是个常量</td>
 <td>所指的对象是一个常量</td>
@@ -460,19 +468,18 @@
 <td>必须</td>
 <td>不必须</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>引用实际上只能是底层 const(常量引用)，不存在顶层 const 的引用，因为引用非对象。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;<span class="type">const</span> p2 = p1;<span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
-
 <p>对于指针和引用而言，顶层 const 在右边，底层 const 在左边。对于其他类型，全都是顶层 const</p>
 <p>执行对象的拷贝操作时，顶层 const 没有影响，两个对象要有相同的底层 const 资格。不能将底层 const 拷贝给非常量，反之可以，非常量将会转化为常量。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = ci; <span class="comment">// 正确，顶层 const 无影响</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>2.4.4 constexpr和常量表达式</strong></p>
 <p>常量表达式是指<strong>值不会改变</strong>并且<strong>在编译过程就能得到计算结果</strong>的表达式。</p>
 <p><strong>字面值属于常量表达式</strong>，由常量表达式初始化的 const 对象也是常量表达式。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">32</span>;          <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = a + <span class="number">1</span>;       <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> sz = <span class="built_in">get_size</span>(); <span class="comment">// 不是常量表达式，因为虽然 sz 是常量，但它的具体值等到运行时才知道。</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>cosntexpr变量</strong></p>
 <p>由 constexpr 声明的变量必须用常量表达式初始化。</p>
 <p>不能用普通函数初始化 constexpr 变量，但可以使用 constexpr 函数初始化 constexpr 变量。</p>
@@ -484,14 +491,11 @@
 <p><strong>指针和constexpr</strong></p>
 <p>注意区分 constexpr 和 const 。constexpr 都是顶层 const，仅对指针本身有效。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> *p = <span class="literal">nullptr</span>;     <span class="comment">// p 是一个指向整型常量的指针</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *q = <span class="literal">nullptr</span>; <span class="comment">// q 是一个指向整数的常量指针</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>2.5 处理类型</strong></p>
 <p><strong>2.5.1 类型别名</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> wages; <span class="keyword">using</span> wages = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">typedef</span> wages base, *p; <span class="comment">// base 是 double 的别名，p 是 double* 的别名。</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>指针、常量和类型别名</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span>* pstring; </span><br><span class="line"><span class="type">const</span> pstring cstr = <span class="number">0</span>; <span class="comment">// 是一个指向 char 的常量指针。</span></span><br></pre></td></tr></table></figure>
-
 <p>不能采用直接替换的方式将其理解为 const char* cstr = 0，这是错误的，是一个指向 const char 的指针。</p>
 <p>替换前基本数据类型是 char*。</p>
 <p>替换后基本数据类型是 const char，*是声明符的一部分。</p>
@@ -506,7 +510,6 @@
 <li>auto 会保留底层 const。</li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> e = &amp;ci;       <span class="comment">// e是一个指向整数常量的指针(对常量对象取地址是一种底层const)</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> f = ci;  <span class="comment">// ci的推演类型是int，f是const int (明确指出auto是顶层const)</span></span><br><span class="line"><span class="keyword">auto</span> &amp;g = ci;       <span class="comment">// g是一个整型常量引用，绑定到ci</span></span><br><span class="line"><span class="keyword">auto</span> &amp;h = <span class="number">42</span>;       <span class="comment">// 错误:不能为非常量引用绑定字面值</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> &amp;j = <span class="number">42</span>; <span class="comment">// 正确:可以为常量引用绑定字面值</span></span><br></pre></td></tr></table></figure>
-
 <p>int 与 int*、int&amp; 是一个基本数据类型，而 const int 与 int 不是一种类型。</p>
 <p>用 auto 定义引用时，必须用 &amp; 指明要定义的是引用。</p>
 <p><strong>2.5.3 decltype类型指示符</strong></p>
@@ -514,12 +517,10 @@
 <p>如果 decltype 使用的表达式是一个变量，则它返回该变量的类型（<strong>包括顶层 const 和引用在内</strong>）。</p>
 <p>当获得的类型是引用时，必须初始化。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) x = <span class="number">0</span>;  <span class="comment">// x 的类型是 const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) y = x;  <span class="comment">// y 的类型是 const int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) z;      <span class="comment">// z 是一个引用，必须初始化</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>decltype 和引用</strong></p>
 <p>表达式的值类别为<strong>左值</strong>产生 T&amp; ，<strong>右值</strong>产生 T。</p>
 <p>左值类型：<strong>解引用指针</strong>，<strong>给变量加括号，赋值操作</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>, &amp;r = i, *p;</span><br><span class="line"><span class="keyword">decltype</span>(r+<span class="number">0</span>) b;      <span class="comment">// b 的类型是 int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) c = i;   <span class="comment">// c 的类型是 int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>((i)) d = i;  <span class="comment">// d 的类型是 int&amp;</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>2.6 自定义数据结构</strong></p>
 <p><strong>2.6.1 定义Sales_data类型</strong></p>
 <p>定义类时可以给数据成员提供<strong>类内初始值</strong>以进行初始化。没有类内初始值的成员则被默认初始化。</p>
@@ -718,6 +719,8 @@
 
 
 
+
+  
 
   
 
