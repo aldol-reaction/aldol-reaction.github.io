@@ -427,13 +427,13 @@ class="math inline">\(T\)</span> 的可行流 <span
 class="math inline">\(\iff\)</span> 新图 <span
 class="math inline">\(S\)</span> 到 <span
 class="math inline">\(T\)</span> 的满流：<span
-class="math inline">\((G,f)\iff (G&#39;,f&#39;)\)</span> 原图特定一个
-<span class="math inline">\(S\)</span> 到 <span
+class="math inline">\((G,f)\iff (G&#39;,f&#39;)\)</span><br />
+原图特定一个 <span class="math inline">\(S\)</span> 到 <span
 class="math inline">\(T\)</span> 的可行流 <span
 class="math inline">\(\iff\)</span> 新图 <span
 class="math inline">\(S\)</span> 到 <span
 class="math inline">\(T\)</span> 的满流：<span
-class="math inline">\((G_0,f_0) \iff (G_0&#39;,f_0&#39;)\)</span>
+class="math inline">\((G_0,f_0) \iff (G_0&#39;,f_0&#39;)\)</span><br />
 现要证明：原图 <span class="math inline">\((G,f)\)</span>
 中任意一个可行流 <span class="math inline">\(f\)</span> 与 <span
 class="math inline">\(G&#39;\)</span> 的一个满流 <span
@@ -441,10 +441,10 @@ class="math inline">\(f_0&#39;\)</span> 对应的残留网络 <span
 class="math inline">\(G&#39;_{f&#39;_0}\)</span> 中 <span
 class="math inline">\(s\)</span> 到 <span
 class="math inline">\(t\)</span> 的任意一个可行流 <span
-class="math inline">\(f&#39;_{s\to t}\)</span> 一一对应 <span
-class="math inline">\(|f&#39;_{s\to t}+f&#39;_0| \to f\)</span>：因为
-<span class="math inline">\(S,T\)</span> 已经满流，所以 <span
-class="math inline">\(f&#39;_{s\to t}\)</span> 不会经过 <span
+class="math inline">\(f&#39;_{s\to t}\)</span> 一一对应<br />
+<span class="math inline">\(|f&#39;_{s\to t}+f&#39;_0| \to
+f\)</span>：因为 <span class="math inline">\(S,T\)</span> 已经满流，所以
+<span class="math inline">\(f&#39;_{s\to t}\)</span> 不会经过 <span
 class="math inline">\(S，T\)</span>。连一条 <span
 class="math inline">\(t\)</span> 到 <span
 class="math inline">\(s\)</span> 容量为 INF 的边，保证了 <span
@@ -491,13 +491,27 @@ class="math inline">\(u\)</span> 和 <span
 class="math inline">\(v\)</span> 到 <span
 class="math inline">\(t\)</span> 的路径</p></li>
 <li><p>算法：dinic + 两边dfs + 暴力枚举边</p></li>
-<li><p>```cpp void dfs(int u, bool vis[], bool t) { vis[u] = true;
-for(int i = h[u]; ~i; i = ne[i]) { int j = i ^ t, v = e[i]; if(f[j]
-&amp;&amp; !vis[v]) dfs(v, vis, t); } }</p>
-<p>int main() { inp(); dinic(); dfs(S, vis_s, 0); dfs(T, vis_t, 1); int
-ans = 0; for(int i = 0; i &lt; m * 2; i += 2) { if(!f[i] and vis_s[e[i ^
-1]] &amp;&amp; vis_t[e[i]]) ++ans; } cout &lt;&lt; ans &lt;&lt; endl;
-return 0; } <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 最大流判定</span><br><span class="line"></span><br><span class="line">题意：$n$ 个点，$m$ 条边的无向图，每条边只能走一次，现在要从 $1$ 号点到 $n$ 号点走 $K$ 次，求出所有走的边的最大值，使这个最大值最小。</span><br><span class="line"></span><br><span class="line">2. 一个流网络存在反向边都可以通过转化(加一个过渡点)来让这个反向边消失。所以一个流网络不管存不存在反向边都可以用之前不考虑流网络反向边的做法来做。</span><br><span class="line"></span><br><span class="line">2. 若正向边与反向边都有流量，可以抵消，剩下的流依然是一个最大流，所以任意一个最大流都必然能找到一个没有同时用两条有向边的最大流与其对应，所以满足一条边只被走一次的条件。</span><br><span class="line"></span><br><span class="line">3. 两条相同方向的边可以合并，故有 4 条边，正向反向各有有一条容量为 1 和 一条容量为 0 的边。合并正反向的边，只需要正向反向各建一条容量为 1 的边，容量为 0 的边不需要建。</span><br><span class="line"></span><br><span class="line">4. 我们可以按照这个图建一个网络流，给每条长度小于x的边流量给1，说明只能走一次；大于x的边流量给 0，说明不能走。源点设为1，汇点设为n，求一遍源点到汇点的最大流，就能得到我们能走多少遍，判断是否大于等于的 $K$ 即可。</span><br><span class="line"></span><br><span class="line">5. ```cpp</span><br><span class="line">  void add(int u, int v, int c) &#123;</span><br><span class="line">      e[idx] = v, w[idx] = c, ne[idx] = h[u], h[u] = idx++;</span><br><span class="line">      e[idx] = u, w[idx] = c, ne[idx] = h[v], h[v] = idx++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  void inp() &#123;</span><br><span class="line">      mst(h, -1);</span><br><span class="line">      cin &gt;&gt; n &gt;&gt; m &gt;&gt; K;</span><br><span class="line">      S = 1, T = n;</span><br><span class="line">      rep(i, 1, m) &#123;</span><br><span class="line">          int a, b, c; cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">          add(a, b, c);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  bool ck(int mi) &#123;</span><br><span class="line">      for(int i = 0; i &lt; idx; ++i) &#123;</span><br><span class="line">          if(w[i] &lt;= mi) f[i] = 1;</span><br><span class="line">          else f[i] = 0;</span><br><span class="line">      &#125;</span><br><span class="line">      return dinic() &gt;= K;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  int main() &#123;</span><br><span class="line">      inp();</span><br><span class="line">      int l = 1, r = 1e6;</span><br><span class="line">      while(l &lt; r) &#123;</span><br><span class="line">          if(ck(mid)) r = mid;</span><br><span class="line">          else l = mid + 1;</span><br><span class="line">      &#125;</span><br><span class="line">      cout &lt;&lt; r &lt;&lt; endl;</span><br><span class="line">      return 0;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>```cpp<br />
+void dfs(int u, bool vis[], bool t) {<br />
+vis[u] = true;<br />
+for(int i = h[u]; ~i; i = ne[i]) {<br />
+int j = i ^ t, v = e[i];<br />
+if(f[j] &amp;&amp; !vis[v]) dfs(v, vis, t);<br />
+}<br />
+}</p>
+<p>int main() {<br />
+inp();<br />
+dinic();<br />
+dfs(S, vis_s, 0);<br />
+dfs(T, vis_t, 1);<br />
+int ans = 0;<br />
+for(int i = 0; i &lt; m * 2; i += 2) {<br />
+if(!f[i] and vis_s[e[i ^ 1]] &amp;&amp; vis_t[e[i]]) ++ans;<br />
+}<br />
+cout &lt;&lt; ans &lt;&lt; endl;<br />
+return 0;<br />
+}<br />
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 最大流判定</span><br><span class="line"></span><br><span class="line">题意：$n$ 个点，$m$ 条边的无向图，每条边只能走一次，现在要从 $1$ 号点到 $n$ 号点走 $K$ 次，求出所有走的边的最大值，使这个最大值最小。</span><br><span class="line"></span><br><span class="line">2. 一个流网络存在反向边都可以通过转化(加一个过渡点)来让这个反向边消失。所以一个流网络不管存不存在反向边都可以用之前不考虑流网络反向边的做法来做。</span><br><span class="line"></span><br><span class="line">2. 若正向边与反向边都有流量，可以抵消，剩下的流依然是一个最大流，所以任意一个最大流都必然能找到一个没有同时用两条有向边的最大流与其对应，所以满足一条边只被走一次的条件。</span><br><span class="line"></span><br><span class="line">3. 两条相同方向的边可以合并，故有 4 条边，正向反向各有有一条容量为 1 和 一条容量为 0 的边。合并正反向的边，只需要正向反向各建一条容量为 1 的边，容量为 0 的边不需要建。</span><br><span class="line"></span><br><span class="line">4. 我们可以按照这个图建一个网络流，给每条长度小于x的边流量给1，说明只能走一次；大于x的边流量给 0，说明不能走。源点设为1，汇点设为n，求一遍源点到汇点的最大流，就能得到我们能走多少遍，判断是否大于等于的 $K$ 即可。</span><br><span class="line"></span><br><span class="line">5. ```cpp</span><br><span class="line">  void add(int u, int v, int c) &#123;</span><br><span class="line">      e[idx] = v, w[idx] = c, ne[idx] = h[u], h[u] = idx++;</span><br><span class="line">      e[idx] = u, w[idx] = c, ne[idx] = h[v], h[v] = idx++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  void inp() &#123;</span><br><span class="line">      mst(h, -1);</span><br><span class="line">      cin &gt;&gt; n &gt;&gt; m &gt;&gt; K;</span><br><span class="line">      S = 1, T = n;</span><br><span class="line">      rep(i, 1, m) &#123;</span><br><span class="line">          int a, b, c; cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">          add(a, b, c);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  bool ck(int mi) &#123;</span><br><span class="line">      for(int i = 0; i &lt; idx; ++i) &#123;</span><br><span class="line">          if(w[i] &lt;= mi) f[i] = 1;</span><br><span class="line">          else f[i] = 0;</span><br><span class="line">      &#125;</span><br><span class="line">      return dinic() &gt;= K;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  int main() &#123;</span><br><span class="line">      inp();</span><br><span class="line">      int l = 1, r = 1e6;</span><br><span class="line">      while(l &lt; r) &#123;</span><br><span class="line">          if(ck(mid)) r = mid;</span><br><span class="line">          else l = mid + 1;</span><br><span class="line">      &#125;</span><br><span class="line">      cout &lt;&lt; r &lt;&lt; endl;</span><br><span class="line">      return 0;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <h2 id="拆点">拆点</h2>
 <h3 id="基本">基本</h3>
