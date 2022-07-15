@@ -788,7 +788,7 @@ decltype。</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-07-14 10:11:01" itemprop="dateModified" datetime="2022-07-14T10:11:01+08:00">2022-07-14</time>
+                <time title="Modified: 2022-07-15 17:25:03" itemprop="dateModified" datetime="2022-07-15T17:25:03+08:00">2022-07-15</time>
               </span>
 
           
@@ -933,15 +933,15 @@ EK=1000-10000</p></li>
         \end{align}
         $$
         </code></pre>
-<p>## 两个最大流算法</p>
+<h2 id="两个最大流算法">两个最大流算法</h2>
 <ol type="1">
 <li>EK，用于费用流</li>
 </ol>
-<pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//找增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></code></pre>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//找增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
 <ol start="2" type="1">
 <li>Dinic</li>
 </ol>
-<pre><code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//bfs分层图(防止环让增广路无限长)</span></span><br><span class="line">    <span class="comment">//dfs找所有的增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></code></pre>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//bfs分层图(防止环让增广路无限长)</span></span><br><span class="line">    <span class="comment">//dfs找所有的增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="二分图">二分图</h2>
 <ol type="1">
 <li><p>二分图是这样的一种图：它的顶点集V可以分为不相交的两部分M和N，使图中的任意一条边的两个端点分别在M和N中。
