@@ -1,475 +1,9 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"aldol-reaction.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="Keep Coding">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://aldol-reaction.github.io/index.html">
-<meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="Keep Coding">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Wang Shuqi">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://aldol-reaction.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Hello World</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hello World</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Light</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://aldol-reaction.github.io/2022/07/16/TEST/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wang Shuqi">
-      <meta itemprop="description" content="Keep Coding">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/16/TEST/" class="post-title-link" itemprop="url">TEST</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-07-16 20:07:04 / 修改时间：20:07:34" itemprop="dateCreated datePublished" datetime="2022-07-16T20:07:04+08:00">2022-07-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://aldol-reaction.github.io/2022/07/15/%E5%85%AC%E5%BC%8F%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wang Shuqi">
-      <meta itemprop="description" content="Keep Coding">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/15/%E5%85%AC%E5%BC%8F%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-07-15 09:32:02 / 修改时间：16:39:13" itemprop="dateCreated datePublished" datetime="2022-07-15T09:32:02+08:00">2022-07-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="4.933ex" height="1.756ex" role="img" focusable="false" viewBox="0 -694 2180.4 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(751.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(1751.4,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g></g></g></svg></mjx-container></span></p>
-<p><span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="4.922ex" height="1.756ex" role="img" focusable="false" viewBox="0 -694 2175.4 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(655.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(1655.4,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g></g></g></svg></mjx-container></span></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>npm un hexo-renderer-kramed --save</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://aldol-reaction.github.io/2022/07/13/C++%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wang Shuqi">
-      <meta itemprop="description" content="Keep Coding">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/13/C++%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-07-13 09:34:52" itemprop="dateCreated datePublished" datetime="2022-07-13T09:34:52+08:00">2022-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 22:23:17" itemprop="dateModified" datetime="2022-07-11T22:23:17+08:00">2022-07-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="第2章-变量和基本类型">第2章 变量和基本类型</h1>
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>/2022/07/13/C++%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="第2章-变量和基本类型">第2章 变量和基本类型</h1>
 <p><strong>2.1 基本内置类型</strong></p>
 <p><strong>2.1.1 算术类型</strong></p>
 <table>
@@ -551,7 +85,7 @@ e 标识，默认 double：3.14, 0., 0e0, .001, 3.14E2。</p>
 <p>字符串字面值的类型实际上是字符数组，编译器会向每个字符串结尾添加一个空字符（'\0'），因此字符串字面值的实际长度要比它的内容多
 1。</p>
 <p>如果两个字符串字面值紧邻且仅由空格、缩进和换行符分隔，则它们实际上是一个整体。因此字符串比较长时可以直接分行书写。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">"A "</span></span><br><span class="line">		<span class="string">"B"</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="string">"A "</span></span><br><span class="line">		<span class="string">"B"</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
 <p><strong>转义序列</strong></p>
 <p>换行符：，横向制表符：，报警符：，纵向制表符：退格符：<strong>双引号："，</strong></p>
 <p><strong>反斜线：\，单引号：'</strong>，<strong>问号：?</strong>，回车符：进纸符：述转义序列被当作一个字符使用。</p>
@@ -559,7 +93,7 @@ e 标识，默认 double：3.14, 0., 0e0, .001, 3.14E2。</p>
 个或多个十六进制数字。</p>
 <p>如果  后面跟着的八进制数字超过 3 个，只有前三个数字与
  构成转义序列。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="number">115</span>  <span class="comment">//字符 M</span></span><br><span class="line">\x4d  <span class="comment">//字符 M</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">\<span class="number">115</span>  <span class="comment">//字符 M</span></span><br><span class="line">\x4d  <span class="comment">//字符 M</span></span><br></pre></td></tr></table></figure>
 <p><strong>指定字面值的类型</strong></p>
 <p>可以通过给字面值增加前缀和后缀来改变字面值的默认类型。</p>
 <p>字符和字符串字面值</p>
@@ -642,13 +176,13 @@ e 标识，默认 double：3.14, 0., 0e0, .001, 3.14E2。</p>
 <p><strong>2.2.1 变量定义</strong></p>
 <p><strong>初始化</strong></p>
 <p>可以在同一条定义语句中使用先定义的变量去初始化后定义的其他变量。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> price = <span class="number">109.99</span>, discount = price * <span class="number">0.6</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> price = <span class="number">109.99</span>, discount = price * <span class="number">0.6</span>;</span><br></pre></td></tr></table></figure>
 <p>初始化不是赋值，初始化是创建变量时赋予一个初始值，赋值是把对象的当前值<strong>擦除</strong>并用一个新值来替代。</p>
 <p><strong>列表初始化</strong></p>
 <p>四种初始化方式，其中使用花括号的方式叫做列表初始化。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> i = {<span class="number">0</span>};</span><br><span class="line"><span class="type">int</span> i{<span class="number">0</span>};</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">i</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> i = {<span class="number">0</span>};</span><br><span class="line"><span class="type">int</span> i{<span class="number">0</span>};</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">i</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>当用于内置类型的变量时，使用列表初始化且初始值存在信息丢失的风险，编译器会报错。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">double</span> ld = <span class="number">3.14</span>; <span class="type">int</span> a{ld}, b = {ld}; <span class="comment">//错误，存在信息丢失的风险，转换未执行</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">c</span><span class="params">(ld)</span>, d </span>= ld;  <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">double</span> ld = <span class="number">3.14</span>; <span class="type">int</span> a{ld}, b = {ld}; <span class="comment">//错误，存在信息丢失的风险，转换未执行</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">c</span><span class="params">(ld)</span>, d </span>= ld;  <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
 <p><strong>默认初始化</strong></p>
 <p>定义于任何函数之外的内置类型则被初始化为 0；</p>
 <p>定义于函数体内的内置类型的对象如果没有初始化，则其值<strong>未定义</strong>。</p>
@@ -658,7 +192,7 @@ e 标识，默认 double：3.14, 0., 0e0, .001, 3.14E2。</p>
 <p>定义：在声明的基础上，创建与名字关联的实体，即申请存储空间，还可能会为变量赋一个初始值。</p>
 <p>要声明一个变量加
 extern，声明变量不能赋值，任何包含了显式初始化的声明即成为定义。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i;     <span class="comment">// 声明 i</span></span><br><span class="line"><span class="type">int</span> i;            <span class="comment">// 定义 i；</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i = <span class="number">1</span>; <span class="comment">// 定义 i，初始化抵消了 extern 的作用。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i;     <span class="comment">// 声明 i</span></span><br><span class="line"><span class="type">int</span> i;            <span class="comment">// 定义 i；</span></span><br><span class="line"><span class="keyword">extern</span> <span class="type">int</span> i = <span class="number">1</span>; <span class="comment">// 定义 i，初始化抵消了 extern 的作用。</span></span><br></pre></td></tr></table></figure>
 <p>变量只能被定义一次，但是可以多次声明。</p>
 <p>extern 定义的变量必须是全局的，这样才可能在其他文件中使用。</p>
 <p>如果要在多个文件中使用同一个变量，变量的定义必须出现在且只能出现在一个文件中，而其他用到该变量的文件必须对其进行声明，却绝对不能重复定义。</p>
@@ -675,7 +209,7 @@ extern，声明变量不能赋值，任何包含了显式初始化的声明即�
 </ol>
 <p><strong>2.2.4 名字的作用域</strong></p>
 <p>花括号以内是作用域。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> {</span><br><span class="line">	<span class="type">int</span> ival = <span class="built_in">read</span>();</span><br><span class="line">} <span class="keyword">while</span>(ival); <span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span> {</span><br><span class="line">	<span class="type">int</span> ival = <span class="built_in">read</span>();</span><br><span class="line">} <span class="keyword">while</span>(ival); <span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
 <p><strong>2.3 复合类型</strong></p>
 <p>复合类型就是基于其他类型定义的类型，引用和指针是其中两种。</p>
 <p>声明语句 = 基本数据类型 + 声明符(类型修饰符(&amp;/*) +
@@ -703,9 +237,9 @@ extern，声明变量不能赋值，任何包含了显式初始化的声明即�
 引用的是一个指针。</li>
 <li>声明的基本数据类型部分指出 r 引用的是一个int指针。</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p;</span><br><span class="line"><span class="type">int</span> *&amp;r = p;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p;</span><br><span class="line"><span class="type">int</span> *&amp;r = p;</span><br></pre></td></tr></table></figure>
 <p><strong>空指针</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="literal">nullptr</span>; <span class="comment">// 三种定义空指针的方式。最好用第一种</span></span><br><span class="line"><span class="type">int</span> *p = <span class="number">0</span>; </span><br><span class="line"><span class="type">int</span> *p = <span class="literal">NULL</span>;    <span class="comment">// NULL 是在头文件 cstdlib 中定义的预处理变量，值为 0。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="literal">nullptr</span>; <span class="comment">// 三种定义空指针的方式。最好用第一种</span></span><br><span class="line"><span class="type">int</span> *p = <span class="number">0</span>; </span><br><span class="line"><span class="type">int</span> *p = <span class="literal">NULL</span>;    <span class="comment">// NULL 是在头文件 cstdlib 中定义的预处理变量，值为 0。</span></span><br></pre></td></tr></table></figure>
 <p>初始化指针，如果不清楚该指向谁，先初始化为 nullptr。</p>
 <p><strong>void* 指针</strong></p>
 <p>void*
@@ -720,7 +254,7 @@ extern，声明变量不能赋值，任何包含了显式初始化的声明即�
 <p>const 引用不能改变引用的对象。</p>
 <p>不能用非常量引用指向一个常量对象。可以用常量引用指向一个非常量对象。</p>
 <p>当用常量引用绑定一个非常量对象时，不能通过引用改变引用对象的值，但是可以通过其他方式改变值。常量指针也一样。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> &amp;r1 = ci; <span class="comment">// 错误，试图让一个非常量引用指向一个常量对象</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;r2 = i; <span class="comment">// 正确，一个常量引用指向一个非常量对象</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> &amp;r1 = ci; <span class="comment">// 错误，试图让一个非常量引用指向一个常量对象</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;r2 = i; <span class="comment">// 正确，一个常量引用指向一个非常量对象</span></span><br></pre></td></tr></table></figure>
 <p>引用的类型必须与其所引用对象的类型一致，但是有一个例外就是初始化常量引用时允许用任意表达式作为初始值（包括常量表达式），只要该表达式结果可以转换为引用的类型。</p>
 <p><strong>2.4.2 指针和const</strong></p>
 <p>指向常量的指针的用法和常量引用相似，<strong>但是是不一样的。</strong>它既可以指向常量也可以指向非常量，不能改变对象的值。但是非常量对象可以通过其他途径改变值</p>
@@ -753,18 +287,18 @@ extern，声明变量不能赋值，任何包含了显式初始化的声明即�
 </table>
 <p>引用实际上只能是底层 const(常量引用)，不存在顶层 const
 的引用，因为引用非对象。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;<span class="type">const</span> p2 = p1;<span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;<span class="type">const</span> p2 = p1;<span class="comment">// 错误</span></span><br></pre></td></tr></table></figure>
 <p>对于指针和引用而言，顶层 const 在右边，底层 const
 在左边。对于其他类型，全都是顶层 const</p>
 <p>执行对象的拷贝操作时，顶层 const 没有影响，两个对象要有相同的底层
 const 资格。不能将底层 const
 拷贝给非常量，反之可以，非常量将会转化为常量。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = ci; <span class="comment">// 正确，顶层 const 无影响</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> i = ci; <span class="comment">// 正确，顶层 const 无影响</span></span><br></pre></td></tr></table></figure>
 <p><strong>2.4.4 constexpr和常量表达式</strong></p>
 <p>常量表达式是指<strong>值不会改变</strong>并且<strong>在编译过程就能得到计算结果</strong>的表达式。</p>
 <p><strong>字面值属于常量表达式</strong>，由常量表达式初始化的 const
 对象也是常量表达式。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">32</span>;          <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = a + <span class="number">1</span>;       <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> sz = <span class="built_in">get_size</span>(); <span class="comment">// 不是常量表达式，因为虽然 sz 是常量，但它的具体值等到运行时才知道。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">32</span>;          <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> b = a + <span class="number">1</span>;       <span class="comment">// 是常量表达式</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> sz = <span class="built_in">get_size</span>(); <span class="comment">// 不是常量表达式，因为虽然 sz 是常量，但它的具体值等到运行时才知道。</span></span><br></pre></td></tr></table></figure>
 <p><strong>cosntexpr变量</strong></p>
 <p>由 constexpr 声明的变量必须用常量表达式初始化。</p>
 <p>不能用普通函数初始化 constexpr 变量，但可以使用 constexpr 函数初始化
@@ -781,12 +315,12 @@ constexpr 变量。</p>
 <p><strong>指针和constexpr</strong></p>
 <p>注意区分 constexpr 和 const 。constexpr 都是顶层
 const，仅对指针本身有效。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> *p = <span class="literal">nullptr</span>;     <span class="comment">// p 是一个指向整型常量的指针</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *q = <span class="literal">nullptr</span>; <span class="comment">// q 是一个指向整数的常量指针</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> *p = <span class="literal">nullptr</span>;     <span class="comment">// p 是一个指向整型常量的指针</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *q = <span class="literal">nullptr</span>; <span class="comment">// q 是一个指向整数的常量指针</span></span><br></pre></td></tr></table></figure>
 <p><strong>2.5 处理类型</strong></p>
 <p><strong>2.5.1 类型别名</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> wages; <span class="keyword">using</span> wages = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">typedef</span> wages base, *p; <span class="comment">// base 是 double 的别名，p 是 double* 的别名。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> wages; <span class="keyword">using</span> wages = <span class="type">double</span>;</span><br><span class="line"><span class="keyword">typedef</span> wages base, *p; <span class="comment">// base 是 double 的别名，p 是 double* 的别名。</span></span><br></pre></td></tr></table></figure>
 <p><strong>指针、常量和类型别名</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span>* pstring; </span><br><span class="line"><span class="type">const</span> pstring cstr = <span class="number">0</span>; <span class="comment">// 是一个指向 char 的常量指针。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span>* pstring; </span><br><span class="line"><span class="type">const</span> pstring cstr = <span class="number">0</span>; <span class="comment">// 是一个指向 char 的常量指针。</span></span><br></pre></td></tr></table></figure>
 <p>不能采用直接替换的方式将其理解为 const char* cstr =
 0，这是错误的，是一个指向 const char 的指针。</p>
 <p>替换前基本数据类型是 char*。</p>
@@ -804,7 +338,7 @@ const，需要明确指出。</li>
 <li>设置一个类型为 auto 的引用/指针时，顶层 const 保留。</li>
 <li>auto 会保留底层 const。</li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> e = &amp;ci;       <span class="comment">// e是一个指向整数常量的指针(对常量对象取地址是一种底层const)</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> f = ci;  <span class="comment">// ci的推演类型是int，f是const int (明确指出auto是顶层const)</span></span><br><span class="line"><span class="keyword">auto</span> &amp;g = ci;       <span class="comment">// g是一个整型常量引用，绑定到ci</span></span><br><span class="line"><span class="keyword">auto</span> &amp;h = <span class="number">42</span>;       <span class="comment">// 错误:不能为非常量引用绑定字面值</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> &amp;j = <span class="number">42</span>; <span class="comment">// 正确:可以为常量引用绑定字面值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">auto</span> e = &amp;ci;       <span class="comment">// e是一个指向整数常量的指针(对常量对象取地址是一种底层const)</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> f = ci;  <span class="comment">// ci的推演类型是int，f是const int (明确指出auto是顶层const)</span></span><br><span class="line"><span class="keyword">auto</span> &amp;g = ci;       <span class="comment">// g是一个整型常量引用，绑定到ci</span></span><br><span class="line"><span class="keyword">auto</span> &amp;h = <span class="number">42</span>;       <span class="comment">// 错误:不能为非常量引用绑定字面值</span></span><br><span class="line"><span class="type">const</span> <span class="keyword">auto</span> &amp;j = <span class="number">42</span>; <span class="comment">// 正确:可以为常量引用绑定字面值</span></span><br></pre></td></tr></table></figure>
 <p>int 与 int*、int&amp; 是一个基本数据类型，而 const int 与 int
 不是一种类型。</p>
 <p>用 auto 定义引用时，必须用 &amp; 指明要定义的是引用。</p>
@@ -815,12 +349,12 @@ decltype。</p>
 使用的表达式是一个变量，则它返回该变量的类型（<strong>包括顶层 const
 和引用在内</strong>）。</p>
 <p>当获得的类型是引用时，必须初始化。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) x = <span class="number">0</span>;  <span class="comment">// x 的类型是 const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) y = x;  <span class="comment">// y 的类型是 const int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) z;      <span class="comment">// z 是一个引用，必须初始化</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> ci = <span class="number">0</span>, &amp;cj = ci;</span><br><span class="line"><span class="keyword">decltype</span>(ci) x = <span class="number">0</span>;  <span class="comment">// x 的类型是 const int</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) y = x;  <span class="comment">// y 的类型是 const int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>(cj) z;      <span class="comment">// z 是一个引用，必须初始化</span></span><br></pre></td></tr></table></figure>
 <p><strong>decltype 和引用</strong></p>
 <p>表达式的值类别为<strong>左值</strong>产生 T&amp;
 ，<strong>右值</strong>产生 T。</p>
 <p>左值类型：<strong>解引用指针</strong>，<strong>给变量加括号，赋值操作</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>, &amp;r = i, *p;</span><br><span class="line"><span class="keyword">decltype</span>(r+<span class="number">0</span>) b;      <span class="comment">// b 的类型是 int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) c = i;   <span class="comment">// c 的类型是 int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>((i)) d = i;  <span class="comment">// d 的类型是 int&amp;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">42</span>, &amp;r = i, *p;</span><br><span class="line"><span class="keyword">decltype</span>(r+<span class="number">0</span>) b;      <span class="comment">// b 的类型是 int</span></span><br><span class="line"><span class="keyword">decltype</span>(*p) c = i;   <span class="comment">// c 的类型是 int&amp;</span></span><br><span class="line"><span class="keyword">decltype</span>((i)) d = i;  <span class="comment">// d 的类型是 int&amp;</span></span><br></pre></td></tr></table></figure>
 <p><strong>2.6 自定义数据结构</strong></p>
 <p><strong>2.6.1 定义Sales_data类型</strong></p>
 <p>定义类时可以给数据成员提供<strong>类内初始值</strong>以进行初始化。没有类内初始值的成员则被默认初始化。</p>
@@ -843,71 +377,27 @@ decltype。</p>
 <li>#endif</li>
 </ol>
 <p>预处理变量无视作用域的规则，作用范围是文件内。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://aldol-reaction.github.io/2022/07/12/%E6%9C%80%E5%A4%A7%E6%B5%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wang Shuqi">
-      <meta itemprop="description" content="Keep Coding">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/12/%E6%9C%80%E5%A4%A7%E6%B5%81/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-07-12 23:27:01" itemprop="dateCreated datePublished" datetime="2022-07-12T23:27:01+08:00">2022-07-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-15 17:25:03" itemprop="dateModified" datetime="2022-07-15T17:25:03+08:00">2022-07-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="网络流">网络流</h1>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/07/15/%E5%85%AC%E5%BC%8F%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="4.933ex" height="1.756ex" role="img" focusable="false" viewBox="0 -694 2180.4 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(751.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(1751.4,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g></g></g></svg></mjx-container></span></p>
+<p><span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="4.922ex" height="1.756ex" role="img" focusable="false" viewBox="0 -694 2175.4 776"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(655.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(1655.4,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g></g></g></svg></mjx-container></span></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>npm un hexo-renderer-kramed --save</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>TEST</title>
+    <url>/2022/07/16/TEST/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/07/12/%E6%9C%80%E5%A4%A7%E6%B5%81/</url>
+    <content><![CDATA[<h1 id="网络流">网络流</h1>
 <h2 id="基本概念">基本概念</h2>
 <ol type="1">
 <li><p>问题可行解 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex;" xmlns="http://www.w3.org/2000/svg" width="5.462ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 2414 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mstyle"><g data-mml-node="mspace"></g></g><g data-mml-node="mo" transform="translate(278,0)"><path data-c="27FA" d="M1438 514Q1438 525 1454 525Q1459 525 1462 525T1467 525T1471 524T1473 523T1475 520T1477 517T1480 512Q1517 438 1578 381T1689 300T1785 263Q1802 258 1802 250T1793 239T1756 228T1698 204Q1554 134 1480 -12Q1476 -21 1473 -22T1458 -24Q1438 -24 1438 -17Q1438 -13 1443 0Q1478 69 1529 123L1539 133H318L328 123Q379 69 414 0Q419 -13 419 -17Q419 -24 399 -24Q388 -24 385 -23T377 -12Q332 77 253 144T72 237Q62 240 59 242T56 250T59 257T70 262T89 268T119 278T160 296Q303 366 377 512Q382 522 385 523T401 525Q419 524 419 515Q419 510 414 500Q379 431 328 377L318 367H1539L1529 377Q1496 412 1467 458T1438 514ZM274 173H1583L1593 181Q1632 211 1710 250Q1709 251 1692 259T1647 283T1593 319L1583 327H930L927 328L602 327H274L264 319Q225 289 147 250Q148 249 165 241T210 217T264 181L274 173Z"></path></g><g data-mml-node="mstyle" transform="translate(2136,0)"><g data-mml-node="mspace"></g></g></g></g></svg></mjx-container></span>
@@ -1042,11 +532,11 @@ EK=1000-10000</p></li>
 <ol type="1">
 <li>EK，用于费用流</li>
 </ol>
-<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//找增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//找增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
 <ol start="2" type="1">
 <li>Dinic</li>
 </ol>
-<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//bfs分层图(防止环让增广路无限长)</span></span><br><span class="line">    <span class="comment">//dfs找所有的增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>) {</span><br><span class="line"><span class="comment">//bfs分层图(防止环让增广路无限长)</span></span><br><span class="line">    <span class="comment">//dfs找所有的增广路</span></span><br><span class="line">    <span class="comment">//更新残留网络</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">//不存在增广路时，此时就是最大流</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="二分图">二分图</h2>
 <ol type="1">
 <li><p>二分图是这样的一种图：它的顶点集V可以分为不相交的两部分M和N，使图中的任意一条边的两个端点分别在M和N中。
@@ -1146,7 +636,7 @@ if(!f[i] and vis_s[e[i ^ 1]] &amp;&amp; vis_t[e[i]]) ++ans;<br>
 cout &lt;&lt; ans &lt;&lt; endl;<br>
 return 0;<br>
 }<br>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 最大流判定</span><br><span class="line"></span><br><span class="line">题意：$n$ 个点，$m$ 条边的无向图，每条边只能走一次，现在要从 $1$ 号点到 $n$ 号点走 $K$ 次，求出所有走的边的最大值，使这个最大值最小。</span><br><span class="line"></span><br><span class="line">2. 一个流网络存在反向边都可以通过转化(加一个过渡点)来让这个反向边消失。所以一个流网络不管存不存在反向边都可以用之前不考虑流网络反向边的做法来做。</span><br><span class="line"></span><br><span class="line">2. 若正向边与反向边都有流量，可以抵消，剩下的流依然是一个最大流，所以任意一个最大流都必然能找到一个没有同时用两条有向边的最大流与其对应，所以满足一条边只被走一次的条件。</span><br><span class="line"></span><br><span class="line">3. 两条相同方向的边可以合并，故有 4 条边，正向反向各有有一条容量为 1 和 一条容量为 0 的边。合并正反向的边，只需要正向反向各建一条容量为 1 的边，容量为 0 的边不需要建。</span><br><span class="line"></span><br><span class="line">4. 我们可以按照这个图建一个网络流，给每条长度小于x的边流量给1，说明只能走一次；大于x的边流量给 0，说明不能走。源点设为1，汇点设为n，求一遍源点到汇点的最大流，就能得到我们能走多少遍，判断是否大于等于的 $K$ 即可。</span><br><span class="line"></span><br><span class="line">5. ```cpp</span><br><span class="line">  void add(int u, int v, int c) {</span><br><span class="line">      e[idx] = v, w[idx] = c, ne[idx] = h[u], h[u] = idx++;</span><br><span class="line">      e[idx] = u, w[idx] = c, ne[idx] = h[v], h[v] = idx++;</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  void inp() {</span><br><span class="line">      mst(h, -1);</span><br><span class="line">      cin &gt;&gt; n &gt;&gt; m &gt;&gt; K;</span><br><span class="line">      S = 1, T = n;</span><br><span class="line">      rep(i, 1, m) {</span><br><span class="line">          int a, b, c; cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">          add(a, b, c);</span><br><span class="line">      }</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  bool ck(int mi) {</span><br><span class="line">      for(int i = 0; i &lt; idx; ++i) {</span><br><span class="line">          if(w[i] &lt;= mi) f[i] = 1;</span><br><span class="line">          else f[i] = 0;</span><br><span class="line">      }</span><br><span class="line">      return dinic() &gt;= K;</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  int main() {</span><br><span class="line">      inp();</span><br><span class="line">      int l = 1, r = 1e6;</span><br><span class="line">      while(l &lt; r) {</span><br><span class="line">          if(ck(mid)) r = mid;</span><br><span class="line">          else l = mid + 1;</span><br><span class="line">      }</span><br><span class="line">      cout &lt;&lt; r &lt;&lt; endl;</span><br><span class="line">      return 0;</span><br><span class="line">  }</span><br></pre></td></tr></table></figure></p></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 最大流判定</span><br><span class="line"></span><br><span class="line">题意：$n$ 个点，$m$ 条边的无向图，每条边只能走一次，现在要从 $1$ 号点到 $n$ 号点走 $K$ 次，求出所有走的边的最大值，使这个最大值最小。</span><br><span class="line"></span><br><span class="line">2. 一个流网络存在反向边都可以通过转化(加一个过渡点)来让这个反向边消失。所以一个流网络不管存不存在反向边都可以用之前不考虑流网络反向边的做法来做。</span><br><span class="line"></span><br><span class="line">2. 若正向边与反向边都有流量，可以抵消，剩下的流依然是一个最大流，所以任意一个最大流都必然能找到一个没有同时用两条有向边的最大流与其对应，所以满足一条边只被走一次的条件。</span><br><span class="line"></span><br><span class="line">3. 两条相同方向的边可以合并，故有 4 条边，正向反向各有有一条容量为 1 和 一条容量为 0 的边。合并正反向的边，只需要正向反向各建一条容量为 1 的边，容量为 0 的边不需要建。</span><br><span class="line"></span><br><span class="line">4. 我们可以按照这个图建一个网络流，给每条长度小于x的边流量给1，说明只能走一次；大于x的边流量给 0，说明不能走。源点设为1，汇点设为n，求一遍源点到汇点的最大流，就能得到我们能走多少遍，判断是否大于等于的 $K$ 即可。</span><br><span class="line"></span><br><span class="line">5. ```cpp</span><br><span class="line">  void add(int u, int v, int c) {</span><br><span class="line">      e[idx] = v, w[idx] = c, ne[idx] = h[u], h[u] = idx++;</span><br><span class="line">      e[idx] = u, w[idx] = c, ne[idx] = h[v], h[v] = idx++;</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  void inp() {</span><br><span class="line">      mst(h, -1);</span><br><span class="line">      cin &gt;&gt; n &gt;&gt; m &gt;&gt; K;</span><br><span class="line">      S = 1, T = n;</span><br><span class="line">      rep(i, 1, m) {</span><br><span class="line">          int a, b, c; cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">          add(a, b, c);</span><br><span class="line">      }</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  bool ck(int mi) {</span><br><span class="line">      for(int i = 0; i &lt; idx; ++i) {</span><br><span class="line">          if(w[i] &lt;= mi) f[i] = 1;</span><br><span class="line">          else f[i] = 0;</span><br><span class="line">      }</span><br><span class="line">      return dinic() &gt;= K;</span><br><span class="line">  }</span><br><span class="line">  </span><br><span class="line">  int main() {</span><br><span class="line">      inp();</span><br><span class="line">      int l = 1, r = 1e6;</span><br><span class="line">      while(l &lt; r) {</span><br><span class="line">          if(ck(mid)) r = mid;</span><br><span class="line">          else l = mid + 1;</span><br><span class="line">      }</span><br><span class="line">      cout &lt;&lt; r &lt;&lt; endl;</span><br><span class="line">      return 0;</span><br><span class="line">  }</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <h2 id="拆点">拆点</h2>
 <h3 id="基本">基本</h3>
@@ -1154,11 +644,11 @@ return 0;<br>
 <li><p>如果对一个边有限制，在边上加一个容量限制。如果对一个点有限制，将一个点拆成两个点，在两个点之间连有限制的边</p></li>
 <li><p>如果每次增加一层图，因为最大流是在残留网络上进行的，于是每一次跑最大流增广一次，就可以得到新图的最大流</p></li>
 <li><p>网络复原</p>
-<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; idx; j += <span class="number">2</span>) {</span><br><span class="line">    f[j] += f[j ^ <span class="number">1</span>];</span><br><span class="line">    f[j ^ <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p></li>
+<p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; idx; j += <span class="number">2</span>) {</span><br><span class="line">    f[j] += f[j ^ <span class="number">1</span>];</span><br><span class="line">    f[j ^ <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <h3 id="星际转移问题">星际转移问题</h3>
 <p>题意：</p>
-<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/discussion/content/4826/">注意答案范围</a></p>
+<p><a href="https://www.acwing.com/problem/content/discussion/content/4826/">注意答案范围</a></p>
 <h3 id="最长递增子序列问题">最长递增子序列问题</h3>
 <h4 id="第一问简单-n2-dp">第一问：简单 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.345ex" height="1.912ex" role="img" focusable="false" viewBox="0 -833.9 1036.6 844.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(633,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> dp</h4>
 <h4 id="第二问">第二问</h4>
@@ -1167,12 +657,12 @@ return 0;<br>
 的边。最大流即为答案。</p>
 <p>取消 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.507ex" role="img" focusable="false" viewBox="0 -666 500 666"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span> 号点和 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span> 号点的限制：拆点之间的边，源点和 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.507ex" role="img" focusable="false" viewBox="0 -666 500 666"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span>，<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span>
 和汇点之间的边容量设为 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.729ex" height="1.595ex" role="img" focusable="false" viewBox="0 -705 1206 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(278,0)"></path><path data-c="66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z" transform="translate(834,0)"></path></g></g></g></svg></mjx-container></span>。直接加边即可。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n, s, S, T, f[M], a[N], dp[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) cin &gt;&gt; a[i];</span><br><span class="line">    S = <span class="number">0</span>, T = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> mx = <span class="number">0</span>;</span><br><span class="line">        dp[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, i - <span class="number">1</span>) <span class="keyword">if</span>(a[j] &lt;= a[i] <span class="keyword">and</span> dp[j] &gt; mx) mx = dp[j];</span><br><span class="line">        dp[i] = mx + <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    s = *<span class="built_in">max_element</span>(dp + <span class="number">1</span>, dp + n + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) <span class="built_in">add</span>(i, i + n, <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span>(dp[i] == <span class="number">1</span>) <span class="built_in">add</span>(S, i, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(dp[i] == s) <span class="built_in">add</span>(i + n, T, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, i - <span class="number">1</span>) <span class="keyword">if</span>(a[j] &lt;= a[i] <span class="keyword">and</span> dp[i] == dp[j] + <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">add</span>(j + n, i, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">inp</span>();</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="number">1</span>) <span class="keyword">return</span> cout &lt;&lt; <span class="number">1</span> &lt;&lt; endl &lt;&lt; n &lt;&lt; endl &lt;&lt; n &lt;&lt; endl, <span class="number">0</span>; <span class="comment">// 特判最长序列长度为1</span></span><br><span class="line">    <span class="type">int</span> tot = <span class="built_in">dinic</span>();</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl &lt;&lt; tot &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 两种取消容量限制的方法，一种直接加边，一种修改原来边的容量</span></span><br><span class="line">    <span class="built_in">add</span>(<span class="number">1</span>, <span class="number">1</span> + n, inf); <span class="built_in">add</span>(S, <span class="number">1</span>, inf);</span><br><span class="line">    <span class="keyword">if</span>(dp[n] == s) <span class="built_in">add</span>(n, n * <span class="number">2</span>, inf), <span class="built_in">add</span>(n * <span class="number">2</span>, T, inf); <span class="comment">// 如果原来有边的话</span></span><br><span class="line">    <span class="comment">// for(int i = 0; i &lt; idx; i += 2) {</span></span><br><span class="line">    <span class="comment">//     int u = e[i ^ 1], v = e[i];</span></span><br><span class="line">    <span class="comment">//     if((u == 1 and v == n + 1) || (u == n and v == 2 * n) ||</span></span><br><span class="line">    <span class="comment">//             (u == S and v == 1)  || (u == 2 * n and v == T))</span></span><br><span class="line">    <span class="comment">//         f[i] = inf;</span></span><br><span class="line">    <span class="comment">// }</span></span><br><span class="line">    cout &lt;&lt; tot + <span class="built_in">dinic</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n, s, S, T, f[M], a[N], dp[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) cin &gt;&gt; a[i];</span><br><span class="line">    S = <span class="number">0</span>, T = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> mx = <span class="number">0</span>;</span><br><span class="line">        dp[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, i - <span class="number">1</span>) <span class="keyword">if</span>(a[j] &lt;= a[i] <span class="keyword">and</span> dp[j] &gt; mx) mx = dp[j];</span><br><span class="line">        dp[i] = mx + <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    s = *<span class="built_in">max_element</span>(dp + <span class="number">1</span>, dp + n + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) <span class="built_in">add</span>(i, i + n, <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span>(dp[i] == <span class="number">1</span>) <span class="built_in">add</span>(S, i, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(dp[i] == s) <span class="built_in">add</span>(i + n, T, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, i - <span class="number">1</span>) <span class="keyword">if</span>(a[j] &lt;= a[i] <span class="keyword">and</span> dp[i] == dp[j] + <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">add</span>(j + n, i, <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">inp</span>();</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="number">1</span>) <span class="keyword">return</span> cout &lt;&lt; <span class="number">1</span> &lt;&lt; endl &lt;&lt; n &lt;&lt; endl &lt;&lt; n &lt;&lt; endl, <span class="number">0</span>; <span class="comment">// 特判最长序列长度为1</span></span><br><span class="line">    <span class="type">int</span> tot = <span class="built_in">dinic</span>();</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl &lt;&lt; tot &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 两种取消容量限制的方法，一种直接加边，一种修改原来边的容量</span></span><br><span class="line">    <span class="built_in">add</span>(<span class="number">1</span>, <span class="number">1</span> + n, inf); <span class="built_in">add</span>(S, <span class="number">1</span>, inf);</span><br><span class="line">    <span class="keyword">if</span>(dp[n] == s) <span class="built_in">add</span>(n, n * <span class="number">2</span>, inf), <span class="built_in">add</span>(n * <span class="number">2</span>, T, inf); <span class="comment">// 如果原来有边的话</span></span><br><span class="line">    <span class="comment">// for(int i = 0; i &lt; idx; i += 2) {</span></span><br><span class="line">    <span class="comment">//     int u = e[i ^ 1], v = e[i];</span></span><br><span class="line">    <span class="comment">//     if((u == 1 and v == n + 1) || (u == n and v == 2 * n) ||</span></span><br><span class="line">    <span class="comment">//             (u == S and v == 1)  || (u == 2 * n and v == T))</span></span><br><span class="line">    <span class="comment">//         f[i] = inf;</span></span><br><span class="line">    <span class="comment">// }</span></span><br><span class="line">    cout &lt;&lt; tot + <span class="built_in">dinic</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h3 id="企鹅游行">企鹅游行</h3>
 <p><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span> 很小，暴力 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.345ex" height="1.912ex" role="img" focusable="false" viewBox="0 -833.9 1036.6 844.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(633,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> 建边即可。</p>
 <p>有时候最大流问题需要我们枚举源点和汇点。此时每次枚举完毕的时候，要还原现场。</p>
 <p>最大流 = 企鹅总数的汇点即是合法点。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">double</span>, <span class="type">double</span>&gt; pdd;</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> D;</span><br><span class="line">pdd p[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">dis</span><span class="params">(pdd a, pdd b)</span> </span>{</span><br><span class="line">    <span class="keyword">auto</span> [x, y] = a;</span><br><span class="line">    <span class="keyword">auto</span> [u, v] = b;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>(<span class="built_in">sq</span>(x - u) + <span class="built_in">sq</span>(y - v));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    idx = tot = <span class="number">0</span>; <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; D;</span><br><span class="line">    S = <span class="number">0</span>, T = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> x, y, t, m; cin &gt;&gt; x &gt;&gt; y &gt;&gt; t &gt;&gt; m;</span><br><span class="line">        tot += t;</span><br><span class="line">        p[i] = {x, y};</span><br><span class="line">        <span class="built_in">add</span>(S, i, t);</span><br><span class="line">        <span class="built_in">add</span>(i, i + n, m);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) <span class="built_in">rep</span>(j, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span>(i == j <span class="keyword">or</span> <span class="built_in">dis</span>(p[i], p[j]) &gt; D) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">add</span>(i + n, j, inf);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">int</span> TT; cin &gt;&gt; TT;</span><br><span class="line">    <span class="keyword">while</span>(TT--) {</span><br><span class="line">        <span class="built_in">inp</span>();</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">rep</span>(t, <span class="number">1</span>, n) {</span><br><span class="line">            T = t;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">dinic</span>() == tot) {</span><br><span class="line">                flag = <span class="literal">true</span>;</span><br><span class="line">                cout &lt;&lt; t - <span class="number">1</span> &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; idx; i += <span class="number">2</span>) {</span><br><span class="line">                f[i] += f[i ^ <span class="number">1</span>];</span><br><span class="line">                f[i ^ <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">puts</span>(flag ? <span class="string">""</span> : <span class="string">"-1"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">double</span>, <span class="type">double</span>&gt; pdd;</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> D;</span><br><span class="line">pdd p[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">dis</span><span class="params">(pdd a, pdd b)</span> </span>{</span><br><span class="line">    <span class="keyword">auto</span> [x, y] = a;</span><br><span class="line">    <span class="keyword">auto</span> [u, v] = b;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>(<span class="built_in">sq</span>(x - u) + <span class="built_in">sq</span>(y - v));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    idx = tot = <span class="number">0</span>; <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; D;</span><br><span class="line">    S = <span class="number">0</span>, T = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> x, y, t, m; cin &gt;&gt; x &gt;&gt; y &gt;&gt; t &gt;&gt; m;</span><br><span class="line">        tot += t;</span><br><span class="line">        p[i] = {x, y};</span><br><span class="line">        <span class="built_in">add</span>(S, i, t);</span><br><span class="line">        <span class="built_in">add</span>(i, i + n, m);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) <span class="built_in">rep</span>(j, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="keyword">if</span>(i == j <span class="keyword">or</span> <span class="built_in">dis</span>(p[i], p[j]) &gt; D) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">add</span>(i + n, j, inf);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">int</span> TT; cin &gt;&gt; TT;</span><br><span class="line">    <span class="keyword">while</span>(TT--) {</span><br><span class="line">        <span class="built_in">inp</span>();</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">rep</span>(t, <span class="number">1</span>, n) {</span><br><span class="line">            T = t;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">dinic</span>() == tot) {</span><br><span class="line">                flag = <span class="literal">true</span>;</span><br><span class="line">                cout &lt;&lt; t - <span class="number">1</span> &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; idx; i += <span class="number">2</span>) {</span><br><span class="line">                f[i] += f[i ^ <span class="number">1</span>];</span><br><span class="line">                f[i ^ <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">puts</span>(flag ? <span class="string">""</span> : <span class="string">"-1"</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h2 id="最大流建图练习">最大流建图练习</h2>
 <p>初始有一层，记为第 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></svg></mjx-container></span> 层，网络共
 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="5.254ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 2322.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(1822.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span> 层。</p>
@@ -1186,179 +676,7 @@ return 0;<br>
 连一条容量为 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></svg></mjx-container></span>
 的点，表示每个顾客最多能买 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></svg></mjx-container></span>
 头猪。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    S = <span class="number">0</span>, T = N - <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> dx = m * (n + <span class="number">2</span>); <span class="comment">// 注意有n+1层</span></span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        a[i] = rd;</span><br><span class="line">        <span class="built_in">add</span>(S, i, a[i]);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> A = rd;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, A) K[j] = rd;</span><br><span class="line">        b[i] = rd;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, A) {</span><br><span class="line">            <span class="built_in">add</span>(K[j] + i * m, i + dx, inf);</span><br><span class="line">            <span class="built_in">add</span>(i + dx, K[j] + (i + <span class="number">1</span>) * m, inf);</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">add</span>(i + dx, T, b[i]);</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, m) <span class="built_in">add</span>(j + (i - <span class="number">1</span>) * m, j + i * m, inf);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Wang Shuqi</p>
-  <div class="site-description" itemprop="description">Keep Coding</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Wang Shuqi</span>
-</div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-</body>
-</html>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">inp</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="built_in">mst</span>(h, <span class="number">-1</span>);</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    S = <span class="number">0</span>, T = N - <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> dx = m * (n + <span class="number">2</span>); <span class="comment">// 注意有n+1层</span></span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, m) {</span><br><span class="line">        a[i] = rd;</span><br><span class="line">        <span class="built_in">add</span>(S, i, a[i]);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">rep</span>(i, <span class="number">1</span>, n) {</span><br><span class="line">        <span class="type">int</span> A = rd;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, A) K[j] = rd;</span><br><span class="line">        b[i] = rd;</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, A) {</span><br><span class="line">            <span class="built_in">add</span>(K[j] + i * m, i + dx, inf);</span><br><span class="line">            <span class="built_in">add</span>(i + dx, K[j] + (i + <span class="number">1</span>) * m, inf);</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">add</span>(i + dx, T, b[i]);</span><br><span class="line">        <span class="built_in">rep</span>(j, <span class="number">1</span>, m) <span class="built_in">add</span>(j + (i - <span class="number">1</span>) * m, j + i * m, inf);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+</search>
