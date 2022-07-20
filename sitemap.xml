@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aldol-reaction.github.io/posts/ed1ccd58/</loc>
+    
+    <lastmod>2022-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aldol-reaction.github.io/404.html</loc>
     
     <lastmod>2022-07-20</lastmod>
@@ -46,15 +55,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://aldol-reaction.github.io/posts/ed1ccd58/</loc>
-    
-    <lastmod>2022-07-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://aldol-reaction.github.io/</loc>
@@ -66,6 +66,13 @@
   
   <url>
     <loc>https://aldol-reaction.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2022-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aldol-reaction.github.io/tags/test/</loc>
     <lastmod>2022-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
